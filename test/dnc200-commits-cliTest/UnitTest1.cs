@@ -11,7 +11,7 @@ namespace dnc200_commits_cliTest
         {
             string userName = "";
             int expectedCommits = 0;
-            int actualCommits = Program.GetCommits(userName);
+            int actualCommits = Program.Request(userName);
             Assert.Equal(expectedCommits, actualCommits);
         }
 
@@ -21,7 +21,7 @@ namespace dnc200_commits_cliTest
             string repoName = "";
             string userName = "";
             int expectedCommits = 0;
-            int actualCommits = Program.GetCommits(userName, repoName);
+            int actualCommits = Program.Request(userName, repoName,false);
             Assert.Equal(expectedCommits, actualCommits);
         }
     }
